@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; devis — B2J Déménagement</title>
+<meta name="description" content="Contactez B2J pour un devis gratuit : déménagement privé, bureaux, manutention lourde et installation d'objets lourds dans les Montagnes Neuchâteloises.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="B2J Déménagement" class="brand-logo">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#prestations">Prestations</a>
+      <a href="index.html#zone">Zone d'intervention</a>
+      <a href="contact.html" class="nav-cta" aria-current="page">Devis gratuit</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact contact--page" id="contact">
+  <div class="contact-inner">
+    <div class="contact-text">
+      <h1>Un objet à déplacer ?</h1>
+      <p>Décrivez-nous votre projet — nous revenons vers vous avec une estimation claire,
+      sans engagement.</p>
+      <div class="contact-details">
+        <a href="tel:+41000000000">📞 +41 00 000 00 00</a>
+        <a href="mailto:contact@b2j-demenagement.ch">✉️ contact@xxxx.ch</a>
+        <span>📍 Neuchâtel</span>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-row">
+        <label for="service">Type de prestation</label>
+        <select id="service" name="service">
+          <option value="lourde">Déménagement &amp; manutention lourde</option>
+          <option value="prive">Déménagement privé</option>
+          <option value="bureaux">Déménagement des bureaux</option>
+          <option value="installation">Installation d'objets lourds</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Votre projet</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="logo.png" alt="B2J Déménagement" class="footer-logo">
+    <p>© <span id="year"></span> B2J — Déménagement Montagnes Neuchâteloises</p>
+    <p class="footer-tags">Planification · Manutention · Transport · Emballage</p>
+    <p class="footer-legal">
+      <a href="index.html">Accueil</a>
+      <span aria-hidden="true">·</span>
+      <a href="privacy.html">Politique de confidentialité</a>
+      <span aria-hidden="true">·</span>
+      <button type="button" id="openCookieSettings" class="footer-legal-btn">Gérer les cookies</button>
+      <span aria-hidden="true">·</span>
+      <a href="login.html">Espace équipe</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ===== COOKIE CONSENT ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieTitle" hidden>
+  <div class="cookie-banner-inner">
+
+    <div class="cookie-main" id="cookieMain">
+      <div class="cookie-text">
+        <p id="cookieTitle" class="cookie-title">Gestion des cookies</p>
+        <p>Nous utilisons des cookies strictement nécessaires au fonctionnement du site, ainsi que
+        des cookies de mesure d'audience pour comprendre comment le site est utilisé — uniquement
+        avec votre accord. Vous pouvez accepter, refuser ou personnaliser votre choix à tout moment.
+        Voir notre <a href="privacy.html">politique de confidentialité</a>.</p>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="cookieCustomize">Personnaliser</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="cookieReject">Refuser</button>
+        <button type="button" class="btn btn-primary btn-sm" id="cookieAccept">Accepter</button>
+      </div>
+    </div>
+
+    <div class="cookie-detail" id="cookieDetail" hidden>
+      <div class="cookie-option">
+        <div class="cookie-option-head">
+          <span>Cookies nécessaires</span>
+          <span class="cookie-toggle cookie-toggle--locked" aria-hidden="true">Toujours actifs</span>
+        </div>
+        <p>Indispensables au fonctionnement du site (navigation, formulaire de contact). Ils ne peuvent pas être désactivés.</p>
+      </div>
+      <div class="cookie-option">
+        <div class="cookie-option-head">
+          <label for="cookieAnalytics">Cookies de mesure d'audience</label>
+          <input type="checkbox" id="cookieAnalytics">
+        </div>
+        <p>Nous aident à savoir quelles pages sont consultées, de manière anonyme, pour améliorer le site.</p>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="cookieRejectAll2">Tout refuser</button>
+        <button type="button" class="btn btn-primary btn-sm" id="cookieSavePrefs">Enregistrer mes choix</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
